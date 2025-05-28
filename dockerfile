@@ -1,5 +1,5 @@
 # Dockerfile alternativo
-FROM ubuntu:latest as build
+FROM ubuntu:latest AS build
 
 # Instala dependencias
 RUN apt-get update && apt-get install -y \
