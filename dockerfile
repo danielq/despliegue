@@ -1,5 +1,5 @@
 # Dockerfile alternativo
-FROM ubuntu:22.04 as build
+FROM ubuntu:latest as build
 
 # Instala dependencias
 RUN apt-get update && apt-get install -y \
