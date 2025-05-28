@@ -20,7 +20,7 @@ COPY . .
 RUN flutter pub get && flutter build web --release
 
 # Fase de producción
-FROM nginx:latest
+FROM nginx
 COPY --from=build /app/build/web /usr/share/nginx/html
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
