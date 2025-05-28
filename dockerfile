@@ -22,7 +22,7 @@ COPY . .
 RUN flutter pub get
 RUN flutter build web --release
 
-FROM nginx:alpine
+FROM alpine:latest
 COPY --from=build /app/build/web /usr/share/nginx/html
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
